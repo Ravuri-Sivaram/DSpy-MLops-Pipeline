@@ -34,3 +34,10 @@ jobs:
         run: |
           ls -la | grep compiled_extractor.json
           echo "Pipeline executed successfully and generated optimized weights."
+
+      # ADD THIS NEW STEP AT THE VERY BOTTOM:
+      - name: Upload Optimized Weights
+        uses: actions/upload-artifact@v4
+        with:
+          name: optimized-dspy-weights
+          path: compiled_extractor.json
