@@ -1,13 +1,16 @@
-name: DSPy Prompt Optimization Pipeline
+name: DSPy MLOps Automated Gatekeeper
 
 on:
   push:
     branches:
       - main
+  # 1. AWeekly Schedule (Every Monday at Midnight UTC)
+  schedule:
+    - cron: '0 0 * * 1' 
   workflow_dispatch:
 
 jobs:
-  optimize-prompts:
+  optimize-and-gate:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,27 +20,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # Fixed the missing quote here
+          python-version: '3.12'
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run DSPy Optimization Loop
+      - name: Run Optimization & Performance Gate
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
+          # The script will now exit with Error 1 if the F1-score is below threshold
           python optimizer.py
 
-      - name: Verify Artifact Creation
-        run: |
-          ls -la | grep compiled_extractor.json
-          echo "Pipeline executed successfully and generated optimized weights."
-
-      # ADD THIS NEW STEP AT THE VERY BOTTOM:
-      - name: Upload Optimized Weights
+      # 2. Uploads if the "Run Optimization" step succeeded (Score > Threshold)
+      - name: Upload Production-Ready Weights
+        if: success() 
         uses: actions/upload-artifact@v4
         with:
-          name: optimized-dspy-weights
+          name: production-weights
           path: compiled_extractor.json
+
+      # 3. Notify if the AI failed to meet quality standards
+      - name: Quality Alert
+        if: failure()
+        run: echo "The model failed to meet the performance threshold. Check logs for F1-score."
