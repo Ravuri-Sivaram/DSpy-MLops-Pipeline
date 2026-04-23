@@ -10,5 +10,125 @@
     "consensus_mechanism": "Proof of Work",
     "vulnerability_category": "Eclipse Attack",
     "proposed_countermeasure": "Increasing outbound connection limits and strict IP-binding rules."
+  },
+  {
+    "paper_text": "This paper analyzes the impact of Maximal Extractable Value (MEV) attacks on decentralized networks utilizing Proof of Stake. We propose a novel decentralized sequencer architecture combined with encrypted mempools to mitigate transaction reordering and front-running.",
+    "consensus_mechanism": "Proof of Stake",
+    "vulnerability_category": "Maximal Extractable Value (MEV)",
+    "proposed_countermeasure": "Decentralized sequencer architecture with encrypted mempools."
+  },
+  {
+    "paper_text": "We present a comprehensive review of Eclipse attacks targeting peer-to-peer gossip networks within Proof of Work blockchains. Our findings suggest that increasing the outbound connection limit and implementing strict IP-binding rules severely degrades the attacker's success rate.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "Eclipse Attack",
+    "proposed_countermeasure": "Increasing outbound connection limits and strict IP-binding rules."
+  },
+  {
+    "paper_text": "Our study examines the 51% attack on low hash rate PoW networks. We evaluate the effectiveness of check-pointing and increasing the confirmation number for exchanges to prevent double-spending.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "51% Attack / Majority Attack",
+    "proposed_countermeasure": "Blockchain check-pointing and increased transaction confirmation counts."
+  },
+  {
+    "paper_text": "Investigating Sybil attacks in PBFT-based permissioned chains, we propose a reputation-based identity management system to ensure that consensus is only reached by authenticated, high-trust nodes.",
+    "consensus_mechanism": "Practical Byzantine Fault Tolerance (PBFT)",
+    "vulnerability_category": "Sybil Attack",
+    "proposed_countermeasure": "Reputation-based identity management and node authentication."
+  },
+  {
+    "paper_text": "This research explores Long-range attacks in Proof of Stake protocols. We advocate for the use of forward-secure signatures and frequent key rotation to prevent attackers from rewriting the chain's history.",
+    "consensus_mechanism": "Proof of Stake",
+    "vulnerability_category": "Long-range Attack",
+    "proposed_countermeasure": "Forward-secure signatures and frequent validator key rotation."
+  },
+  {
+    "paper_text": "We analyze BGP Hijacking as a threat to network-layer consensus propagation. By rerouting traffic, attackers can delay block delivery. The use of BGP monitoring tools and Origin Validation is proposed as a primary defense.",
+    "consensus_mechanism": "Network-layer / Generic Consensus",
+    "vulnerability_category": "BGP Hijacking",
+    "proposed_countermeasure": "BGP monitoring and Route Origin Validation (ROV)."
+  },
+  {
+    "paper_text": "Our work details a DDoS attack targeting validator nodes in Solana's Gulfstream. We suggest rate-limiting transaction forwarding and implementing prioritized gossip filtering to maintain network liveness.",
+    "consensus_mechanism": "Proof of History / Tower BFT",
+    "vulnerability_category": "DDoS Attack",
+    "proposed_countermeasure": "Rate-limiting and prioritized gossip traffic filtering."
+  },
+  {
+    "paper_text": "Focusing on Nothing-at-Stake problems in early PoS implementations, we introduce 'slashing' conditions to penalize validators who sign multiple blocks at the same height.",
+    "consensus_mechanism": "Proof of Stake",
+    "vulnerability_category": "Nothing-at-Stake",
+    "proposed_countermeasure": "Implementation of slashing conditions for malicious validators."
+  },
+  {
+    "paper_text": "A study on Liveness attacks in Aptos reveals that leader schedules can be predicted. We propose a Verifiable Random Function (VRF) based leader selection to prevent targeted leader isolation.",
+    "consensus_mechanism": "BFT-variant / AptosBFT",
+    "vulnerability_category": "Leader Isolation / Liveness Attack",
+    "proposed_countermeasure": "VRF-based randomized leader selection."
+  },
+  {
+    "paper_text": "Analyzing Time-jacking attacks in Bitcoin, we find that manipulating the network time of a node can lead to isolation. We recommend a strict time-sync protocol using authenticated NTP sources.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "Time-jacking Attack",
+    "proposed_countermeasure": "Authenticated NTP time-sync and tighter drift constraints."
+  },
+  {
+    "paper_text": "We investigate Double-spending in PoW. By creating a private fork and releasing it once it is longer, attackers can reverse confirmed payments. Increasing the confirmation depth remains the most effective mitigation.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "Double-spending Attack",
+    "proposed_countermeasure": "Increased block confirmation depth for high-value transactions."
+  },
+  {
+    "paper_text": "This paper covers Transaction Reordering attacks. Miners can manipulate transaction sequences to gain arbitrage. We propose commit-reveal schemes for transaction content to prevent front-running.",
+    "consensus_mechanism": "Generic / Smart Contract Layer",
+    "vulnerability_category": "Front-running / MEV",
+    "proposed_countermeasure": "Commit-reveal schemes and encrypted mempools."
+  },
+  {
+    "paper_text": "Studying Forking attacks in DPoS, we find that a small group of delegates can stall the network. We propose a dynamic threshold for consensus that adjusts based on active participation metrics.",
+    "consensus_mechanism": "Delegated Proof of Stake (DPoS)",
+    "vulnerability_category": "Forking Attack / Cartel Formation",
+    "proposed_countermeasure": "Dynamic consensus thresholds based on delegate participation."
+  },
+  {
+    "paper_text": "We analyze Grinding attacks on RNG in early PoS chains. Attackers influence future validator selection by biasing block hashes. Using VDFs (Verifiable Delay Functions) ensures the selection process is unbiased.",
+    "consensus_mechanism": "Proof of Stake",
+    "vulnerability_category": "Randomness Grinding Attack",
+    "proposed_countermeasure": "Implementation of Verifiable Delay Functions (VDFs)."
+  },
+  {
+    "paper_text": "Our research identifies Packet Loss vulnerabilities in Algorand's gossip protocol. We suggest an adaptive retransmission strategy to ensure message propagation under adversarial network conditions.",
+    "consensus_mechanism": "Pure Proof of Stake (PPoS)",
+    "vulnerability_category": "Packet Loss / Network Partition",
+    "proposed_countermeasure": "Adaptive message retransmission and gossip redundancy."
+  },
+  {
+    "paper_text": "Focusing on Permissionless sharding, we identify Shard-takeover attacks where attackers corrupt a single shard. We propose Cross-shard verification and frequent validator reshuffling to mitigate this risk.",
+    "consensus_mechanism": "Sharded Consensus",
+    "vulnerability_category": "Shard-takeover Attack",
+    "proposed_countermeasure": "Validator reshuffling and cross-shard cryptographic proofs."
+  },
+  {
+    "paper_text": "In Tendermint-based chains, we observe that Byzantine nodes can cause infinite loops during pre-commit. We propose a mandatory timeout escalation and locked-votes mechanism to guarantee finality.",
+    "consensus_mechanism": "Byzantine Fault Tolerance (BFT)",
+    "vulnerability_category": "Liveness / Deadlock Attack",
+    "proposed_countermeasure": "Timeout escalation and vote locking mechanisms."
+  },
+  {
+    "paper_text": "This paper outlines Replay attacks during hard forks. Transactions from one chain are valid on the other. We suggest unique Chain IDs and replay-protection headers for all consensus-level messages.",
+    "consensus_mechanism": "Generic / Hard Fork Scenario",
+    "vulnerability_category": "Replay Attack",
+    "proposed_countermeasure": "Unique Chain IDs and replay-protection signatures."
+  },
+  {
+    "paper_text": "We examine the impact of selfish mining in PoW. By withholding blocks, miners gain more rewards than their hash power suggests. We propose modifying the block-acceptance rule to penalize long-private-fork withholding.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "Selfish Mining",
+    "proposed_countermeasure": "Revised block acceptance rules based on propagation timestamps."
+  },
+  {
+    "paper_text": "Analyzing the GHOST protocol under high network latency, we find it vulnerable to orphan-rate manipulation. We suggest adopting a hybrid weight-based selection to ensure the heaviest chain is correctly identified.",
+    "consensus_mechanism": "GHOST / PoW variant",
+    "vulnerability_category": "Orphan Manipulation / Forking",
+    "proposed_countermeasure": "Hybrid weight-based chain selection logic."
   }
 ]
