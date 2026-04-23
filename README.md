@@ -1,7 +1,7 @@
 # 🚀 DSPy-MLOps: Automated Programmatic Extraction Pipeline
 
 ### **Project Description**
-This project is an automated, **domain-agnostic MLOps pipeline** designed to extract structured insights from complex technical documents. While the underlying infrastructure is built to handle any specialized data domain, it is currently demonstrated through the extraction of **Blockchain Consensus Layer Security** vulnerabilities. By leveraging the **DSPy framework** and **Gemini 1.5 Flash**, it replaces fragile manual prompt engineering with a programmatic optimization loop and an automated CI/CD performance gatekeeper.
+This project is an automated, **domain-agnostic MLOps pipeline** designed to extract structured insights from complex technical documents. While the underlying infrastructure is built to handle any specialized data domain, it is currently demonstrated through the extraction of **Blockchain Consensus Layer Security** vulnerabilities. By leveraging the **DSPy framework** and **Gemini 2.5 Flash**, it replaces fragile manual prompt engineering with a programmatic optimization loop and an automated CI/CD performance gatekeeper.
 
 ---
 
