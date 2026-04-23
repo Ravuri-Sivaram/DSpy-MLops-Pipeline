@@ -1,0 +1,49 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "paper_text": "This paper analyzes the impact of Maximal Extractable Value (MEV) attacks on decentralized networks utilizing Proof of Stake. We propose a novel decentralized sequencer architecture combined with encrypted mempools to mitigate transaction reordering and front-running.",
+      "consensus_mechanism": "Proof of Stake",
+      "vulnerability_category": "Maximal Extractable Value (MEV)",
+      "proposed_countermeasure": "A novel decentralized sequencer architecture combined with encrypted mempools to mitigate transaction reordering and front-running."
+    },
+    {
+      "augmented": true,
+      "paper_text": "We present a comprehensive review of Eclipse attacks targeting peer-to-peer gossip networks within Proof of Work blockchains. Our findings suggest that increasing the outbound connection limit and implementing strict IP-binding rules severely degrades the attacker's success rate.",
+      "consensus_mechanism": "Proof of Work",
+      "vulnerability_category": "Eclipse",
+      "proposed_countermeasure": "Increasing the outbound connection limit and implementing strict IP-binding rules."
+    }
+  ],
+  "signature": {
+    "instructions": "Extracts security vulnerabilities, consensus mechanisms, and countermeasures from academic abstracts.",
+    "fields": [
+      {
+        "prefix": "Paper Text:",
+        "description": "The abstract or methodology section of the research paper."
+      },
+      {
+        "prefix": "Consensus Mechanism:",
+        "description": "The specific consensus protocol discussed (e.g., PoW, PoS, PBFT)."
+      },
+      {
+        "prefix": "Vulnerability Category:",
+        "description": "The type of attack or vulnerability (e.g., MEV, Sybil, Eclipse)."
+      },
+      {
+        "prefix": "Proposed Countermeasure:",
+        "description": "A brief 1-sentence summary of the proposed defense."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.2.0",
+      "cloudpickle": "3.1"
+    }
+  }
+}

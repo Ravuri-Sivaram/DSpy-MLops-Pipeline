@@ -1,0 +1,14 @@
+[
+  {
+    "paper_text": "This paper analyzes the impact of Maximal Extractable Value (MEV) attacks on decentralized networks utilizing Proof of Stake. We propose a novel decentralized sequencer architecture combined with encrypted mempools to mitigate transaction reordering and front-running.",
+    "consensus_mechanism": "Proof of Stake",
+    "vulnerability_category": "Maximal Extractable Value (MEV)",
+    "proposed_countermeasure": "Decentralized sequencer architecture with encrypted mempools."
+  },
+  {
+    "paper_text": "We present a comprehensive review of Eclipse attacks targeting peer-to-peer gossip networks within Proof of Work blockchains. Our findings suggest that increasing the outbound connection limit and implementing strict IP-binding rules severely degrades the attacker's success rate.",
+    "consensus_mechanism": "Proof of Work",
+    "vulnerability_category": "Eclipse Attack",
+    "proposed_countermeasure": "Increasing outbound connection limits and strict IP-binding rules."
+  }
+]
